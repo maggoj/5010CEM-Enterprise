@@ -1,0 +1,252 @@
+<html>
+<head>
+<title>Order Confirmation</title>
+ 
+</head>
+<body>
+ 
+<header>
+ 
+
+ 
+</header>
+<main>
+ 
+<div class="container">
+  <div style="text-align:center">
+    <h1 class="heading">Order Confirmation</h1>
+   
+  </div>
+  <div class="row">
+    <div class="column">
+     
+      
+    </div>
+    <div class="column">
+    <form action="/action_page.php">
+       <label for="fname">Full Name</label>
+        <input type="text" id="fname" name="fullname" >
+        <label for="address">Address</label>
+        <input type="text" id="address" name="adress">
+        <label for="city">City</label>
+        <input type="text" name="city">
+        
+        
+        <label for="email">Email</label>
+        <input type="text" name="email">
+        
+        <label for="pnumber">Phone Number</label>
+        <input type="text" name="pnumber">
+    
+    
+    
+    
+    <div class="container">
+  <div style="text-align:center">
+    <h1 class="heading">Payment</h1>
+   
+  </div>
+  
+  <div class="column">
+    <form action="/action_page.php">
+       <label for="cname">Name on the card</label>
+        <input type="text" id="cname" name="cardname" >
+
+       <label for="cnumber">Card Number</label>
+        <input type="text" id="cnumber" name="cardnumber" >
+         <label for="edate">Expiry Date</label>
+        <input type="text" id="edate" name="expirydate" >
+         <label for="cvv">CVV</label>
+        <input type="text" id="cvv" name="cvv" >
+    
+    
+   
+       
+        <input type="submit" value="Place order">
+      </form>
+    </div>
+  </div>
+</div>
+ 
+
+<div class="footer-nav">
+<center>
+<a href=“privacy.html”>Privacy Policy </a>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+<a href=“terms.html”>Terms & Conditions</a>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+<a href=“cookie.html”>Cookie Policy </a>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+</center> 
+
+</div>
+ 
+ 
+</footer>
+</div>
+</section>
+ 
+
+ 
+<style>
+body {
+    margin: 0;
+    margin-top: 0px;
+  backgroung-image: url(C:\Users\jiyam\OneDrive\Desktop\contact.jpg);
+}
+ 
+header {
+    display: flex;
+    position: fixed;
+  
+    top: 0;
+    left: 20;
+    right: 20;
+    height: 0px;
+    line-height: 50px;
+    background-color: #eee;
+}
+ 
+header * {
+    display: inline;
+    height: 150px;
+text-align: center;
+}
+ 
+header ul {
+   text-align: left;
+margin-right: 20px;
+    display: inline;
+   
+    
+}
+ 
+* {
+  box-sizing: border-box;
+}
+ 
+ 
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+ 
+input[type=submit] {
+  background-color: #ece9da;
+  color: black;
+  padding: 12px 20px;
+cursor: pointer;
+ 
+}
+ 
+ 
+ 
+ 
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+ 
+ 
+.column {
+  width: 90%;
+  margin-top: 6px;
+  padding: 0px;
+}
+ 
+ 
+.row:after {
+  content: "";
+  display: grid;
+ 
+}
+ 
+ 
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+ 
+ 
+}
+ 
+ 
+ 
+.subheading{
+text-align: center;
+padding: 0px;
+}
+ 
+ 
+.footer {
+    position: fixed;
+    z-index: 99999;
+    bottom: 0;
+    display: none;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    color: #fff;
+    text-align:center;
+    cursor: pointer;
+}
+.show, .footer-nav:hover {
+    display: block;
+}
+ 
+
+
+</style>
+ 
+<script>
+$(window).scroll(function(event) {
+           function footer()
+    {
+        var scroll = $(window).scrollTop();
+        if(scroll > 50)
+        {
+            $(".footer-nav").fadeIn("slow").addClass("show");
+        }
+        else
+        {
+            $(".footer-nav").fadeOut("slow").removeClass("show");
+        }
+       
+        clearTimeout($.data(this, 'scrollTimer'));
+        $.data(this, 'scrollTimer', setTimeout(function() {
+            if ($('.footer-nav').is(':hover')) {
+                      footer();
+                      }
+            else
+            {
+                      $(".footer-nav").fadeOut("slow");
+            }
+                      }, 2000));
+    }
+    footer();
+});
+ 
+</script>
+ 
+ 
+</main>
+</body>
+</html>
